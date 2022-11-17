@@ -31,4 +31,4 @@
     tmList.testData.Add(tm3);
 
 ExportService e = new ExportService();
-e.CreateExcelFile(tmList, "d:\\");
+e.CrearExcel(tmList, "d:\\");
