@@ -30,5 +30,21 @@
     tm3.TestDate = DateTime.Now.AddDays(-3);
     tmList.testData.Add(tm3);
 
-ExportService e = new ExportService();
-e.CrearExcel(tmList, "d:\\");
+//ExportService e = new ExportService();
+//e.CrearExcel(tmList, "d:\\");
+
+/*
+ // Leer un archivo Excel y mostrarlo en la terminal 
+string direccionArchivo = @"d:\Output.xlsx";
+
+LeerExcel l = new LeerExcel();
+List<string> listado = l.LeerExcelSAX(direccionArchivo);
+
+Console.WriteLine(listado);
+*/
+string direccionArchivo = @"d:\\";
+
+CrearExcelNvo c = new CrearExcelNvo();
+c.CreateSpreadsheetWorkbook(direccionArchivo);
+
+//c.InsertText(@"d:\Nuevo.xlsx", "HOLAaaaaaaa, FASDASJDASJAJK , AJSKDSJDKASKJDA JD");
