@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Spreadsheet;
 namespace ExportacionDatos_OpenXML
 {
     //Crea un nuevo excel en blanco
+    //https://stackoverflow.com/questions/53733025/styles-in-excel-using-open-xml
     public class CrearExcelNvo
     {
         public void CreateSpreadsheetWorkbook(string filepath)
