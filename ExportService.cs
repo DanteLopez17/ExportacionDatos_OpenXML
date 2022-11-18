@@ -192,9 +192,20 @@ namespace ExportacionDatos_OpenXML
             patternFill3.Append(backgroundColorFill3);
             fill3.Append(patternFill3);
 
+            // Fill ID = 3
+            Fill fill4 = new Fill();
+            PatternFill patternFill4 = new PatternFill() { PatternType = PatternValues.Solid };
+            ForegroundColor foregroundColorFill4 = new ForegroundColor() { Rgb = new HexBinaryValue("56EFD8") };
+            BackgroundColor backgroundColorFill4 = new BackgroundColor() { Rgb = new HexBinaryValue("FF00FF00") };
+
+            patternFill4.Append(foregroundColorFill4);
+            patternFill4.Append(backgroundColorFill4);
+            fill4.Append(patternFill4);
+
             fills1.Append(fill1);
             fills1.Append(fill2);
             fills1.Append(fill3);
+            fills1.Append(fill4);
 
             #endregion
 
@@ -266,7 +277,7 @@ namespace ExportacionDatos_OpenXML
             //Maneja las celdas que no tienen datos
             CellFormat cellFormat2 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U };
             //Maneja los datos del cuerpo
-            CellFormat cellFormat3 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)1U, FillId = (UInt32Value)2U, BorderId = (UInt32Value)1U, FormatId = (UInt32Value)0U, ApplyBorder = true };
+            CellFormat cellFormat3 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)1U, FillId = (UInt32Value)3U, BorderId = (UInt32Value)1U, FormatId = (UInt32Value)0U, ApplyBorder = true };
             //Maneja los encabezados
             CellFormat cellFormat4 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)1U, FormatId = (UInt32Value)0U, ApplyFont = true, ApplyBorder = true };
 
@@ -284,7 +295,7 @@ namespace ExportacionDatos_OpenXML
 
             #endregion
 
-
+            #region Diferencial Formato
             DifferentialFormats differentialFormats1 = new DifferentialFormats() { Count = (UInt32Value)0U };
             TableStyles tableStyles1 = new TableStyles() { Count = (UInt32Value)0U, DefaultTableStyle = "TableStyleMedium2", DefaultPivotStyle = "PivotStyleLight16" };
 
@@ -304,6 +315,7 @@ namespace ExportacionDatos_OpenXML
 
             stylesheetExtensionList1.Append(stylesheetExtension1);
             stylesheetExtensionList1.Append(stylesheetExtension2);
+            #endregion
 
             #region StyleSheet
             stylesheet1.Append(fonts1);
